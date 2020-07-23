@@ -242,7 +242,31 @@ console.log(gradeCalc(110));
 //Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
 // Hint - you may need to study tomorrow's traning kit on arrays
 // try looking up the .includes() method
+function countVowels(word) {
+	const array = Array.from(word.toLowerCase());
+	console.log(array);
 
+	let count = 0;
+
+	array.forEach((letter) => {
+		console.log(count);
+		if (
+			letter == 'a' ||
+			letter == 'e' ||
+			letter == 'i' ||
+			letter == 'o' ||
+			letter == 'u'
+		) {
+			count = count + 1;
+		}
+	});
+
+	return count;
+}
+
+console.log(countVowels('AEIOU'));
+console.log(countVowels('aeiou'));
+console.log(countVowels('eddie'));
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
